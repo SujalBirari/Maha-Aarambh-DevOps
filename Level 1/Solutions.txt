@@ -1,0 +1,12 @@
+// practical question 1 - 
+
+1. cd testdir
+2. mkdir -p /var/log/webapp
+3. sudo groupadd webapp_group
+4. sudo useradd -m -g webapp_group webapp_user
+5. sudo passwd webapp_user
+6. sudo chown -R webapp_user:webapp_group /var/log/webapp
+7. ls -l 
+
+// actual answer 
+8. sudo chmod 750 /var/log/webapp
