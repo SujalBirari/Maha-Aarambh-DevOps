@@ -10,3 +10,16 @@
 
 // actual answer 
 8. sudo chmod 750 /var/log/webapp
+
+// practical question 2 - 
+
+1. git branch feature/user-login main
+2. git checkout feature/user-login 
+// git checkout -b feature/user-login main
+
+3. touch login.py 
+4. #TODO: Add some placeholder text 
+// echo "# placeholder text" > login.py
+
+5. git add .
+6. git commit -m "feat: Add initial login module"
