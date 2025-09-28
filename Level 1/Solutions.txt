@@ -23,3 +23,35 @@
 
 5. git add .
 6. git commit -m "feat: Add initial login module"
+
+// practical question 3 - 
+1. checking if the hostname can be turned into an IP address
+-> dig git.internal.corp or nslookup git.internal.corp
+-> query dns servers to find ip addresses associated with a domain name 
+
+2. If DNS if fine, then checking network connectivity
+-> ipconfig
+- dislpay computer's complete network configuration
+-> ping <IP_from_dig>
+- sends small (default 4) packets of data to specific IP over ICMP and waits and returns with reply 
+
+3. If ping replies are normal, then checking reachability and firewall protections
+-> nc -vz <IP_from_dig> 22
+- checks whether the Git server's SSH port (22) is reachable over TCP 
+
+4. Advanced command to check 
+-> tracert git.internal.corp 
+- lists all "hops"(routers) it passes though the way till destination
+
+// question 4
+1. ssh into the machine
+ssh username@host 
+
+2. listing all processes and top 5 processes 
+ps -aux
+top 
+top -o %CPU 
+ps -eo pid,ppid,%cpu,%mem,cmd --sort=-%cpu | head -n 6
+
+3. killing a process gracefully
+kill 9876 or kill 15 9876 or kill SIGTERM 9876
